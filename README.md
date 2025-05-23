@@ -147,6 +147,8 @@ Contém gráficos e tabelas gerados para o projeto.
 - [Documento CSV de Acidentes 2024 (Agrupados por pessoa - Todas as causas e tipos de acidentes)](https://drive.google.com/file/d/14qBOhrE1gioVtuXgxkCJ9kCA8YtUGXKA/view) **Utilizado no projeto**
 
 
+### Devido ao tamanho do dataset original (arquivo `acidentes2024_todas_causas_tipos.csv`), **não está incluído** neste repositório. Para obte-lo, basta realizar o download no **link acima do documento CSV**
+
 /analise-acidentes-prf-2024/
 
 ├── /indicadores/ # Gráficos exportados 
