@@ -37,21 +37,22 @@ Portanto, para melhor compreensão, extraí os [Dados da PRF dos acidentes de Tr
 
 ## Possíveis Próximas Análises:
 
-### **Tipos de Veículos que mais se acidentam**
+- Tipos de Veículos que mais se acidentam
 
-### **Maiores Causas**
+- Maiores Causas**
 
-### **Por Sexo**
+- Por Sexo
 
-### **Por Faixa Etária**
+- Por Faixa Etária
 
-### **Quantidade de mortos e feridos**
+- Quantidade de mortos e feridos
 
 ## Observações sobre a Base de Dados:
 
 - Cada linha representa um registro de acidente por Vítima. Caso um carro com 4 passageiros e um condutor se acidente, são registrados 5 linhas na base de dados. Diversas colunas possuem os valores repetidos até chegar as informações pertinentes a vítima (como estado físico, idade, sexo e etc.)
+    
+        Para a análise da quantidade de acidentes e suas classificações, foi considerado somente 1 linha de cada evento para não inflar os dados de acidentes por estado.
 
-- Para a análise da quantidade de acidentes e suas classificações, foi considerado somente 1 linha de cada evento e não por vítima.
 
 ### Pasta de Indicadores
 
@@ -73,7 +74,7 @@ Indicadores antigos não mais utilizados no projeto principal se encontram dentr
 
 ├── /indicadores/ # Gráficos exportados do projeto principal
 
-├── acidentes2024_todas_causas_tipos.zip # Dados brutos PRF
+├── acidentes2024_todas_causas_tipos.zip **# Dados brutos PRF**
 
 └── main.ipynb # Arquivo jupyter com todo o desenvolvimento
 
