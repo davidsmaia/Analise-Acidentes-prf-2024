@@ -12,147 +12,75 @@ Portanto, para melhor compreensão, extraí os [Dados da PRF dos acidentes de Tr
 
 - Utilizar o projeto como fonte de estudos e aprendizado, gerando melhorias e novas análises ao longo do tempo.
 
-- Aplicar conceitos estudados e tentar responder as questões abaixo, criando indicadores.
-
 - Verificar se minhas análises condizem com as notícias sobre o Trânsito Brasileiro.
 
 - Entender as aplicaçãos práticas dos conceitos de extração, manipulação e análise de dados com Python.
 
+## Análises Realizadas:
 
-## Perguntas e Respostas:
+### **1 - Estados com o maior número de Acidentes (eventos) e suas Classificações**
 
-### **1 - Estados com o maior número de Registros de Acidentes**
+    | Posição |   Estado   | Quantidade | Percentil |
+    |---------|------------|------------|-----------|
+    | 01º     | MG         |      9296  |    12.71% |
+    | 02º     | SC         |      8381  |    11.46% |
+    | 03º     | PR         |      7576  |    10.36% |
+    | 04º     | RJ         |      6389  |     8.73% |
+    | 05º     | RS         |      5206  |     7.12% |
+    | 06º     | SP         |      4883  |     6.67% |
+    | 07º     | BA         |      4151  |     5.67% |
+    | 08º     | GO         |      3305  |     4.52% |
+    | 09º     | PE         |      3230  |     4.42% |
+    | 10º     | MT         |      2554  |     3.49% |
 
-    | Posição |   Estado   | Quantidade |
-    |---------|------------|------------|
-    | 01º     | MG         |     80257  |
-    | 02º     | PR         |     71523  |
-    | 03º     | SC         |     54459  |
-    | 04º     | RS         |     39602  |
-    | 05º     | BA         |     34879  |
-    | 06º     | SP         |     33955  |
-    | 07º     | RJ         |     33554  |
-    | 08º     | GO         |     31927  |
-    | 09º     | PE         |     24998  |
-    | 10º     | MT         |     23581  |
+![Acidentes por Estado e Classificação](indicadores/hist_acidentes_estado.png)
 
-![Acidentes por Estado](indicadores/acidentes_por_estado.png)
+## Possíveis Próximas Análises:
 
-### **2 - Estados mais Acidentes que contenham Vítimas Fatais**
+### **Tipos de Veículos que mais se acidentam**
 
-    | Posição |   Estado   | Quantidade |
-    |---------|------------|------------|
-    | 01º     | MG         |     16175  |
-    | 02º     | PR         |     10292  |
-    | 03º     | BA         |      7901  |
-    | 04º     | SC         |      6868  |
-    | 05º     | GO         |      6046  |
-    | 06º     | PA         |      5766  |
-    | 07º     | RS         |      5614  |
-    | 08º     | RO         |      4843  |
-    | 09º     | MT         |      4361  |
-    | 10º     | MS         |      4071  |
+### **Maiores Causas**
 
-    Observação: O número de registros de acidentes não necessariamente reflete na quantidade de registros com vítimas fatais
+### **Por Sexo**
 
-![Fatalidades Por Estado](indicadores/fatalidades_por_estado.png)
+### **Por Faixa Etária**
 
+### **Quantidade de mortos e feridos**
 
-### **3 - Tipos de Veículos que mais se envolvem em Acidentes**
+## Observações sobre a Base de Dados:
 
-    | Posição |   Tipo de Veículo   | Quantidade |
-    |---------|---------------------|------------|
-    | 01º     | Automóvel           |    199465  |
-    | 02º     | Motocicleta         |    116917  |
-    | 03º     | Caminhonete         |     51010  |
-    | 04º     | Semireboque         |     50449  |
-    | 05º     | Caminhão-trator     |     42464  |
-    | 06º     | Ônibus              |     34244  |
-    | 07º     | Caminhão            |     33134  |
-    | 08º     | Camioneta           |     14649  |
-    | 09º     | Motoneta            |     11745  |
-    | 10º     | Utilitário          |      9813  |
+- Cada linha representa um registro de acidente por Vítima. Caso um carro com 4 passageiros e um condutor se acidente, são registrados 5 linhas na base de dados. Diversas colunas possuem os valores repetidos até chegar as informações pertinentes a vítima (como estado físico, idade, sexo e etc.)
 
-![Registro de acidentes por veiculo](indicadores/acidentes_por_veiculo.png)
-
-### **4 - Veículos que possuem os maiores números de Acidentes com Vítimas Fatais**
-
-    | Posição |   Tipo de Veículo   | Quantidade |
-    |---------|---------------------|------------|
-    | 01º     | Automóvel           |     22659  |
-    | 02º     | Ônibus              |     13718  |
-    | 03º     | Motocicleta         |     13374  |
-    | 04º     | Semireboque         |     11370  |
-    | 05º     | Caminhão-trator     |      9512  |
-    | 06º     | Caminhonete         |      8113  |
-    | 07º     | Caminhão            |      6904  |
-    | 08º     | Camioneta           |      2036  |
-    | 09º     | Micro-ônibus        |      1703  |
-    | 10º     | Reboque             |      1367  |
-
-![Registros de Fatalidades por Veículo](indicadores/fatalidades_por_veiculo.png)
-
-
-## Próximas Análises:
-
-### **5 - Maiores Causas de Acidentes por Estado**
-
-### **6 - Maiores Causas de Acidentes com Vítimas Fatais por Estado ?**
-
-### **7 - Sexo que mais se envolve em Acidentes**
-
-### **8 - Sexo com a maior mortalidade em Acidentes**
-
-### **9 - Registro de Acidentes por Faixa Etária**
-
-### **10 - Registro de Vítimas Fatais por Faixa Etária**
-
-
-## Roadmap de Melhorias:
-
-1 - Gerar um único gráfico que contenham os valores totais de acidentes e fatalidades. O objetivo é facilitar a compreensão de quantos acidentes são convertidos em fatalidas e ter esse comparativo mais fácil e direto
-
-2 - Adicionar as porcentagens para entender o impacto de cada ítem nos indicadores
-
-3 - Sempre buscar indicadores que deixam as análises mais enchutas e que possam reduzir o tamanho da apresentação do projeto, mas sem deixar de responder nenhuma questão.
-
-4 - Adicionar novas questões ao longo da elaboração do projeto
-
-### Nota Metodológica
-- Gráficos 1-2: Barras verticais (análise por estado)
-- Gráficos 3-4: Barras horizontais (análise por veículo)
-- Padrão de cores: 
-  - 🔵 Azul = Total de acidentes
-  - 🔴 Vermelho = Vítimas fatais
-
-## Observações sobre a Qualidade dos Dados:
-
-- Inconsistência em `mortos = 0` para acidentes fatais.  
-- Valores como "Ileso" em registros de vítimas fatais.  
-    - Decisão: Utilizar `classificacao_acidente` em vez de `mortos`
+- Para a análise da quantidade de acidentes e suas classificações, foi considerado somente 1 linha de cada evento e não por vítima.
 
 ### Pasta de Indicadores
 
-Contém gráficos e tabelas gerados para o projeto.
-- Convenção de nomes:
-  - `acidentes_por_[categoria].png`
-  - `fatalidades_por_[categoria].png`
-- Fonte dos dados: PRF (2024).
-
+Contém gráficos e tabelas gerados no projeto.
+Indicadores antigos não mais utilizados no projeto principal se encontram dentro da pasta "antigos", assim como os códigos descontinuados do projeto principal.
 
 ## 🔗 Links Úteis e Estrutura: 
   
 - [Dados Oficiais da PRF](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf)
 
 - [Documento CSV de Acidentes 2024 (Agrupados por pessoa - Todas as causas e tipos de acidentes)](https://drive.google.com/file/d/14qBOhrE1gioVtuXgxkCJ9kCA8YtUGXKA/view) **Utilizado no projeto**
-
-
-### Devido ao tamanho do dataset original (arquivo `acidentes2024_todas_causas_tipos.csv`), **não está incluído** neste repositório. Para obte-lo, basta realizar o download no **link acima do documento CSV**
+ 
 
 /analise-acidentes-prf-2024/
 
-├── /indicadores/ # Gráficos exportados 
+├── /antigos # Arquivos descontinuados do projeto
 
-├── acidentes2024_todas_causas_tipos.csv # Dados brutos PRF
+    └── /indicadores # Antigos gráficos descontinuádos no projeto principal
+
+├── /indicadores/ # Gráficos exportados do projeto principal
+
+├── acidentes2024_todas_causas_tipos.zip # Dados brutos PRF
 
 └── main.ipynb # Arquivo jupyter com todo o desenvolvimento
+
+### Notícias:
+
+[Agência Brasil - Acidentes em rodovias federais matam 6,16 mil pessoas em 2024](https://agenciabrasil.ebc.com.br/geral/noticia/2025-04/acidentes-em-rodovias-federais-matam-616-mil-pessoas-em-2024#:~:text=As%20unidades%20federativas%20que%20se,de%207%2C6%20mil%20sinistros.
+)
+
+[CNN Brasil - Acidentes em rodovias federais mataram mais de 16 pessoas por dia em 2024](https://www.cnnbrasil.com.br/nacional/brasil/acidentes-em-rodovias-federais-mataram-mais-de-16-pessoas-por-dia-em-2024/
+)
